@@ -1,0 +1,29 @@
+{
+  "name": "curso-node-npm",
+  "version": "1.0.0",
+  "description": "Curso midudev desde 0 para nodeJS",
+  "keywords": [
+    "curso",
+    "node",
+    "nodejs",
+    "midudev"
+  ],
+  "homepage": "https://github.com/AlejoRosasC2012/CursoNode#readme",
+  "bugs": {
+    "url": "https://github.com/AlejoRosasC2012/CursoNode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejoRosasC2012/CursoNode.git"
+  },
+  "license": "ISC",
+  "author": "Alejandro Rosas Cuesta - AlejoRosasC",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}
