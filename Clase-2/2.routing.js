@@ -19,9 +19,22 @@ const processRequest = (req, res) => {
     case 'POST':
       switch (url) {
         case '/pokemon':{
-          const body = ''
+          let body = ''
+          // Escuchar el evento 'data' para recibir los datos del cuerpo de la solicitud
+          req.on('data', (chunk) => {
+            body += chunk.toString()
+          })
+          // Escuchar el evento 'end' para procesar los datos recibidos
+          req.on('end', () => {
+            const data = JSON.parse(body) // Convertir el cuerpo de la solicitud a un objeto JavaScript
+            res.writeHead(201, { 'Content-Type': 'application/json; charset=utf-8' })
+            data.timestamp = Date.now() // Agregar un timestamp al objeto de datos
+            res.end(JSON.stringify(data))
+          })
+
           break
         }
+
         default:
           res.statusCode = 404
           res.setHeader('Content-Type', 'text/html; charset=utf-8')
