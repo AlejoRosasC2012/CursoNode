@@ -1,0 +1,35 @@
+### Traer Peliculas
+GET http://localhost:1234/movies
+
+#### Traer Peliculas por ID
+GET http://localhost:1234/movies/e541c00f-ad91-4f1a-8945-284134ab5673
+
+### Traer peliculas por Género
+GET http://localhost:1234/movies?genre=romance
+
+### Traer peliculas por Título
+GET http://localhost:1234/movies?search=jhon%20wick
+
+### Crear una película
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "Jhon Wick",
+    "year": 2025,
+    "director": "Chad Stahelski",
+    "duration": 101,
+    "poster": "https://es.web.img3.acsta.net/pictures/16/10/26/08/50/198471.jpg",
+    "genre": [
+      "Action"
+    ],
+    "rate": 7.8
+  }
+
+### Modificar data de una pelicula
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title": "Jhon Wick 2"
+}
